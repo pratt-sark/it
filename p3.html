@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function reverseStr() {
+            var s = document.getElementById("inp").value;
+            var rev = s.split("").reverse().join("");
+            //set 'value' of input elements, not 'innerHTML'
+            document.getElementById("inp").value = rev;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Reverses input string</h2>
+    <input type="text" id="inp">
+    <button type="button" onclick="reverseStr()">Click to reverse string</button>
+</body>
+
+</html>

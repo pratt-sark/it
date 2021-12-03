@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 10px;
+            padding: 12%;
+        }
+    </style>
+    <script>
+        function sortText(text) {
+            return text.split('').sort().join('');
+        };
+
+        function changeStr() {
+            var s = document.getElementById("inp").value;
+            var str = sortText(s);
+            document.getElementById("out").value = str;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <h2>Sorts characters of input string alphabetically</h2>
+        <p>
+            <label for="inp">Text goes here : </label>
+            <input type="text" id="inp">
+        </p>
+        <p>
+            <label for="out">Sorted string : </label>
+            <input type="text" id="out" readonly>
+        </p>
+        <button type="button" onclick="changeStr()">Click to view sorted string</button>
+    </div>
+</body>
+
+</html>

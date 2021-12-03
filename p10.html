@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 10px;
+            padding: 12%;
+        }
+    </style>
+    <script>
+        function bsort() {
+            var arr = document.getElementById("inp").value;
+            arr = arr.split(',').map(Number);
+            //document.write(arr);
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            //document.write(arr);
+            document.getElementById("out").value = arr;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <h2>Sorts numbers using Bubble Sort</h2>
+        <p>
+            <label for="inp">Numbers (comma-separated) : </label>
+            <input type="text" id="inp">
+        </p>
+        <p>
+            <label for="out">Sorted numbers : </label>
+            <input type="text" id="out" readonly>
+        </p>
+        <button type="button" onclick="bsort()">Click to Bubble Sort</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Program 1</title>
+    <script>
+        function dispDate() {
+            let d1 = new Date();
+            let day = ("0" + d1.getDate()).slice(-2);
+            let month = ("0" + (d1.getMonth() + 1)).slice(-2);
+            let year = d1.getFullYear();
+            let hours = d1.getHours();
+            let minutes = d1.getMinutes();
+            let seconds = d1.getSeconds();
+            let today = day + "/" + month + "/" + year + " " + hours + ":" + minutes + ":" + seconds;
+            document.getElementById("date1").innerHTML = today;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Displays current date and time</h2>
+
+    <p id="date1">Date will be displayed here</p>
+    <button type="button" onclick="dispDate()">Click to display</button>
+
+</body>
+
+</html>

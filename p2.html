@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 10px;
+            padding: 12%;
+        }
+    </style>
+    <script>
+        function add() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var res = a + b;
+            document.getElementById("c").value = res;
+        }
+
+        function subt() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var res = a - b;
+            document.getElementById("c").value = res;
+        }
+
+        function mult() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var res = a * b;
+            document.getElementById("c").value = res;
+        }
+
+        function divi() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            if (b === 0) {
+                document.getElementById("c").value = "undefined";
+            } else {
+                var res = a / b;
+                document.getElementById("c").value = res;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <h2>CALCULATOR</h2>
+        <p>
+            <label for="a">First Number : </label>
+            <input type="text" id="a">
+        </p>
+        <p>
+            <label for="b">Second Number : </label>
+            <input type="text" id="b">
+        </p>
+        <p>
+            <label for="c">Result : </label>
+            <input type="text" id="c" readonly>
+        </p>
+        <button type="button" onclick="add()">+</button>
+        <button type="button" onclick="subt()">-</button>
+        <button type="button" onclick="mult()">*</button>
+        <button type="button" onclick="divi()">/</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 10px;
+            padding: 12%;
+        }
+    </style>
+    <script>
+        function changeCase(a) {
+            var b = "";
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] === a[i].toLowerCase())
+                    b += a[i].toUpperCase();
+                else
+                    b += a[i].toLowerCase();
+            }
+            return b;
+        }
+
+        function changeStr() {
+            var s = document.getElementById("inp").value;
+            var str = changeCase(s);
+            document.getElementById("out").value = str;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <h2>Changes case of letters of input string</h2>
+        <p>
+            <label for="inp">Text goes here : </label>
+            <input type="text" id="inp">
+        </p>
+        <p>
+            <label for="out">Output : </label>
+            <input type="text" id="out" readonly>
+        </p>
+        <button type="button" onclick="changeStr()">Click to change case</button>
+    </div>
+</body>
+
+</html>
