@@ -3,6 +3,14 @@
 
 <head>
     <title>Program 1</title>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 10px;
+            padding: 12%;
+        }
+    </style>
     <script>
         function dispDate() {
             let d1 = new Date();
@@ -19,11 +27,11 @@
 </head>
 
 <body>
-    <h2>Displays current date and time</h2>
-
-    <p id="date1">Date will be displayed here</p>
-    <button type="button" onclick="dispDate()">Click to display</button>
-
+    <div class="center">
+        <h2>Displays current date and time</h2>
+        <p id="date1">Date will be displayed here</p>
+        <button type="button" onclick="dispDate()">Click to display</button>
+    </div>
 </body>
 
 </html>
