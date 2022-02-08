@@ -1,4 +1,4 @@
-#INFO about regex in Javascript
+# INFO about regex in Javascript
 
 g tells to find all matches, not just the first.
 
@@ -9,3 +9,9 @@ What goes inside the // is the pattern.
 [] tells to match any character in a set.
 
 aeiou are the characters in the set.
+
+
+
+# String.prototype.localeCompare()
+The localeCompare() method returns a number indicating whether a 
+reference string comes before, or after, or is the same as the given string in sort order.
